@@ -35,6 +35,7 @@ nav ul{
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+	margin-bottom: 0;
 }
 
 nav ul li a{
