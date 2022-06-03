@@ -103,6 +103,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 2em;
 }
 
 .imgPrincipal img{
@@ -333,7 +334,7 @@ img {
 	height: 370px;
 }
 .columna{
-	width: 48%;
+	display: flex;
 	padding: 0.625em;
 	box-sizing: border-box;
 }
@@ -367,8 +368,15 @@ img {
 }
 .formulario .acciones{
 	text-align: center;
+	padding-top: 2em;
 }
 
+.btn{
+	background: rgb(229,112,231);
+}
+.acciones button:hover{
+	background: rgb(167, 14, 170);
+}
 /*fin contacto*/
 
 
