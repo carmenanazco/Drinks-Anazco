@@ -21,42 +21,8 @@ header img{
 }
 
 nav{
-	background: rgb(229,112,231);
-    background: -moz-linear-gradient(top, rgba(229,112,231,1) 20%, rgba(168,73,163,1) 60%);
-    background: -webkit-linear-gradient(top, rgba(229,112,231,1) 20%,rgba(168,73,163,1) 60%);
-    background: linear-gradient(to bottom, rgba(229,112,231,1) 20%,rgba(168,73,163,1) 60%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 );	
 	grid-area: nav;
 }
-
-nav ul{
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	margin-bottom: 0;
-}
-
-nav ul li a{
-	color: white;
-	text-decoration: none;
-	text-align: center;
-	line-height: 50px;
-	font-size: 1.2em;
-	padding: 0.2em 0.2em;
-	transition: all 0.3s ease;
-	}
-
-nav ul li a:hover{
-	background-color: rgba(4,2,2,0.3);
-}
-
-nav ul li a.activo{
-	background-color: rgba(4,2,2,0.3);
-}
-
-
 
 footer{
 	clear: both;
@@ -77,6 +43,10 @@ h2{
 	text-decoration: underline;
 	margin-bottom: 20px;
 	padding: 20px;
+}
+
+.h3 h3{
+	font-size: 18px;
 }
 
 
@@ -166,20 +136,22 @@ img {
 	
 	border: 1px solid #ddd;
 	border-radius: 0.5em;
-	margin: 1em;
+	margin: 0.5rem;
+	padding: 0.5rem;
 	box-sizing: border-box;
 	
 }
+
 .tragos img{
 	width: 200px;
 	height: 200px;
+	padding: 1em;
 	
 }
 
 .galeria{
 	padding: 0.5em;
 	margin: 0.5em 2em;
-	background-color: rgba(255,228,225,0.5);
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
@@ -196,7 +168,6 @@ img {
 	"nav nav nav"
 	"galeria galeria galeria"
 	"pie pie pie";
-	
 }
 
 
@@ -209,10 +180,10 @@ img {
 }
 
 .tragos h3{
-	margin: 2em 0;
+	margin: 1em 0;
 	text-align: center;
-	
 }
+
 .receta{
 	margin: 2em;
 	padding: 2em;
@@ -373,10 +344,10 @@ img {
 }
 
 .btn{
-	background: rgb(229,112,231);
+	background: rgb(206, 204, 206);
 }
 .acciones button:hover{
-	background: rgb(167, 14, 170);
+	background: rgb(168, 167, 167);
 }
 /*fin contacto*/
 
@@ -388,14 +359,21 @@ img {
 		grid-template-areas: 
 			"header"
 			"nav"
+			"img"
 			"column1"
-			"img" 
 			"column2"
 			"pie";
 		}
-	.imgPrincipal{
-		height: 25%;
+	.imgPrincipal img{
+		height: 50%;		
 		}
+
+	nav{
+		height: 50%;	
+	}
+	.imgPrincipal{
+		margin: 0;
+	}
 	.conAlcohol{
 		grid-template-columns: 1fr;
 		grid-template-rows: 0.5fr, 0.5fr, 2fr, 0.5fr;
@@ -410,8 +388,22 @@ img {
 		flex-direction: column;
 	}
 	body{
-		font-size: 12px;
+		font-size: 14px;
 	}
+	.h3 h3{
+		font-size: 14px;
+	}
+	header img{
+		height: 100px;
+		
+	}
+	.offcanvas.offcanvas-end{
+		width: 50%;
+	}
+	.navbar-toggler{
+		font-size: 10px;
+	}
+
 	  
 }
 
