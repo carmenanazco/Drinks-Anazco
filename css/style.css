@@ -1,410 +1,388 @@
-/*inicio base*/
-
-*{
-	margin: 0;
-	padding: 0;
+.column1, .column2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-body{
-	font-size: 16px;
-	line-height: 20px;
-	font-family: 'Quicksand', sans-serif;
+
+.column1, .column2, h2, footer p {
+  margin: 1em;
+  padding: 1em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
 }
 
 header {
-	grid-area: header;
+  grid-area: header;
+}
+header img {
+  height: 150px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-header img{
-	height: 150px;
-	width: 100%;
-	margin: 0 auto;
+nav {
+  grid-area: nav;
 }
 
-nav{
-	grid-area: nav;
+footer {
+  clear: both;
+  background: #ccc;
+  color: #333;
+  font-size: 0.7em;
+  font-style: italic;
+  text-align: center;
+  grid-area: pie;
+}
+h2 {
+  text-align: center;
 }
 
-footer{
-	clear: both;
-	background:#ccc;
-	color: #333;
-	font-size: 0.7em;
-	font-style: italic;
-	text-align: center;
-	padding: 2em 0;
-	grid-area: pie;
-
+.h3 h3 {
+  font-size: 18px;
 }
-
-
-
-h2{
-	text-align: center;
-	text-decoration: underline;
-	margin-bottom: 20px;
-	padding: 20px;
-}
-
-.h3 h3{
-	font-size: 18px;
-}
-
 
 img {
-	border-style: none;
+  border-style: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.column1 {
+  grid-area: column1;
+}
+
+.column2 {
+  grid-area: column2;
+}
+
+.imgPrincipal {
+  grid-area: img;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.imgPrincipal img {
+  transition: all 0.3s ease;
+}
+.imgPrincipal img:hover {
+  animation: fotograma 1s ease;
+  animation-iteration-count: 3;
+}
+
+@keyframes fotograma {
+  15% {
+    transform: rotate(25deg);
   }
-  button {
-	font-family: inherit; 
-	font-size: 100%; 
+  30% {
+    transform: rotate(-25deg);
   }
-  
-/*fin base*/
-
-/*inicio home*/
-.column1{
-	grid-area: column1;
+  50% {
+    transform: rotate(25deg);
+  }
+  65% {
+    transform: rotate(-25deg);
+  }
+  80% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+.inicio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.5fr, 0.5fr, 1fr, 1fr, 0.5fr;
+  grid-template-areas: "header header header" "nav nav nav" "column1 img column2" "column1 img column2" "pie pie pie";
 }
 
-.column2{
-	grid-area: column2;
+.column1 p, .column2 p {
+  animation-name: Animac;
+  animation-duration: 6s;
 }
 
-.imgPrincipal{
-	grid-area: img;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-bottom: 2em;
+@keyframes Animac {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
 }
-
-.imgPrincipal img{
-	transition: all 0.3s ease;
-}
-
-@keyframes fotograma{
-	15% {transform: rotate(25deg);}
-	30% {transform: rotate(-25deg);}
-	50% {transform: rotate(25deg);}
-	65% {transform: rotate(-25deg);}
-	80% {transform: rotate(30deg);}
-	100% {transform: rotate(-20deg);}
-}
-
-.imgPrincipal img:hover{
-	animation:fotograma 1s ease;
-	animation-iteration-count: 3;
-}
-
-	
-.inicio{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 0.5fr, 0.5fr, 1fr, 1fr, 0.5fr;
-	grid-template-areas: 
-	"header header header"
-	"nav nav nav"
-	"column1 img column2"
-	"column1 img column2"
-	"pie pie pie";
-}
-	  
-.column1, .column2{
-	display: flex;
-	align-items: center;
-	justify-items: center;
-	justify-content: center;
-	margin: 2em;
-}
-
-
-
-
-.column1, .column2 p{
-	animation-name: Animac;
-	animation-duration: 6s;
-}
-
-@keyframes Animac{
-	from{ color: white; }
-	to{ color: black; }
-}
-/*fin home*/
-
 /*Inicio Con alcohol*/
-
-.tragos{
-	
-	border: 1px solid #ddd;
-	border-radius: 0.5em;
-	margin: 0.5rem;
-	padding: 0.5rem;
-	box-sizing: border-box;
-	
+.tragos {
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
 
-.tragos img{
-	width: 200px;
-	height: 200px;
-	padding: 1em;
-	
+.tragos img {
+  width: 100%;
+  max-height: 200px;
+  padding: 1em;
+  margin: 0 auto;
 }
 
-.galeria{
-	padding: 0.5em;
-	margin: 0.5em 2em;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
-	grid-area: galeria;
+.galeria {
+  padding: 0.5em;
+  margin: 0.5em 2em;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  grid-area: galeria;
 }
 
-.conAlcohol{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 0.5fr, 0.5fr, 2fr, 0.5fr;
-	grid-template-areas: 
-	"header header header"
-	"nav nav nav"
-	"galeria galeria galeria"
-	"pie pie pie";
+.conAlcohol {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "galeria" "pie";
 }
 
-
-.arriba{
-	text-decoration: none;
-	font-weight: bold;
-	margin: 1em;
-	display: flex;
-	align-items: flex-end;
+.arriba {
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1em;
+  display: flex;
+  align-items: flex-end;
 }
 
-.tragos h3{
-	margin: 1em 0;
-	text-align: center;
+.tragos h3 {
+  margin: 1em 0;
+  text-align: center;
 }
 
-.receta{
-	margin: 2em;
-	padding: 2em;
-	background-color: rgba(255,228,225,0.5);
-	border: 1px solid #ddd;
-	border-radius: 0.5em;
-	box-sizing: border-box;
-	
+.receta {
+  margin: 2em;
+  padding: 2em;
+  background-color: rgba(255, 228, 225, 0.5);
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  box-sizing: border-box;
 }
 
-.receta ul{
-	list-style: none;
-	margin: 2em;
+.receta ul {
+  list-style: none;
+  margin: 2em;
 }
-.receta img{
-	width: 200px;
-	height: 200px;
-	display: flex;
-	text-align: right;
+
+.receta img {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  text-align: right;
 }
 
 /*fin con alcohol*/
-
 /*Inicio sin alcohol*/
-
-.licuados{
-	background-image: url(../img/fondo-licuado.jpeg);
-	padding: 0.5em;
+.licuados {
+  background-image: url(../img/fondo-licuado.jpeg);
+  padding: 0.5em;
 }
 
-.smoothies{
-	background-image: url(../img/fondo-smoothie.jpeg);
-	padding: 0.5em;
+.smoothies {
+  background-image: url(../img/fondo-smoothie.jpeg);
+  padding: 0.5em;
 }
 
-.licuado{
-	width: 400px;
-	margin: 1em;
-	padding: 1em;
-	background-color: rgba(255,248,220,0.5);
+.recetaLicuado {
+  width: 400px;
+  margin: 1em;
+  padding: 1em;
+  background-color: rgba(255, 248, 220, 0.5);
 }
 
-.smoothie{
-	width: 400px;
-	margin: 1em;
-	padding: 1em;
-	background-color: rgba(240,260,240,0.5);
-	margin-left: auto;
+.recetaSmoothie {
+  width: 400px;
+  margin: 1em;
+  padding: 1em;
+  background-color: rgba(240, 255, 240, 0.5);
+  margin-left: auto;
 }
 
-.licuados h2, .smoothies h2{
-	padding-top: 1.5em;
+.licuados h2, .smoothies h2 {
+  padding-top: 1.5em;
 }
-.smoothie, .licuados h3{
-	margin: 1.5em 0;
+
+.smoothie, .licuados h3 {
+  margin: 1.5em 0;
 }
 
 /*fin sin alcohol*/
-
 /*Inicio cafe*/
-.cafe-back{
-	background-color: rgba(255,248,220,0.5);
-	padding: 0.5em;
+.cafe-back {
+  background-color: rgba(255, 248, 220, 0.5);
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-.cafe{
-	border: 1px solid #ddd;
-	border-radius: 0.5em;
-	margin: 1em 0;
-	padding: 1em;
-	box-sizing: border-box;
-	overflow: hidden;
-	background-color: white;
-}
-.cafe figure{
-	float: right;
-	margin: 0 0 0 1em;
-}
-.cafe figure img{
-	width: 200px;
-	height: 200px;
+.cafe {
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  margin: 1em 0;
+  padding: 1em;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: white;
+  max-height: 400px;
 }
 
-.cafe .preparacion{
-	width: 75%;
-	float: left;
+.cafe figure {
+  margin: 1em;
+  align-items: center;
 }
 
-.cafe .preparacion h3{
-	color: saddlebrown;
-	font-size: 1.2em;
-	font-weight: 500;
-	margin: 0 0 1em;
-	border-bottom: 1px solid black;
-	padding-bottom: 0.5em;
+.cafe figure img {
+  width: 200px;
+  height: 200px;
 }
 
-.cafe .preparacion h4{
-	color: chocolate;
-	font-size: 1em;
-	font-weight: 200;
+.cafe .preparacion h3 {
+  color: saddlebrown;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 0 0 1em;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5em;
 }
-.cafe .preparacion h4{
-	font-size: 0.8em;
-	line-height: 1.2em;
-}	
 
-.cafe p{
-	margin: 1.5em;
+.cafe .preparacion h4 {
+  color: chocolate;
+  font-size: 1em;
+  font-weight: 200;
 }
+
+.cafe .preparacion h4 {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+
+.cafe p {
+  margin: 1.5em;
+}
+
 /*Fin cafe*/
-
-
 /*inicio contacto*/
-.texto{
-	margin-top: 2em;
-}
-.texto img{
-	width: 470px;
-	height: 370px;
-}
-.columna{
-	display: flex;
-	padding: 0.625em;
-	box-sizing: border-box;
+.sectionContacto {
+  padding: 1em;
+  margin: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
 }
 
-.formulario label{
-	vertical-align: top;
-	width: 16%;
-	display: inline-block;
+.sectionContacto p {
+  margin: 1em;
 }
+
+.imagenContacto {
+  width: 50%;
+}
+
+.imagenContacto img {
+  width: 350px;
+  height: 300px;
+  margin: 1em;
+}
+
+.formulario {
+  width: 50%;
+  margin-top: 3em;
+}
+
+.formulario label {
+  vertical-align: top;
+  width: 16%;
+  display: flex;
+}
+
 .formulario input,
-.formulario textarea{
-	background-color: #ddd;
-	border-radius: 5px;
-	border: 1px solid #999;
-	font-size: 0.8em;
-	padding: 0.4em 0.6em;
-	width: 96%;
-}
-.formulario textarea{
-	height: 10em;
-	resize: none;
-}
-.formulario input[type="submit"]{
-	background-color: #6da9ed;
-	box-shadow: 0 0 10px rgba(0,0,0,0.4);
-	color: white;
-	font-size: 1em;
-	padding: 0.4em 0.2em;
-	text-align: center;
-	width: auto;
-}
-.formulario .acciones{
-	text-align: center;
-	padding-top: 2em;
+.formulario textarea {
+  background-color: #ddd;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 0.8em;
+  padding: 0.4em 0.6em;
+  width: 96%;
 }
 
-.btn{
-	background: rgb(206, 204, 206);
+.formulario textarea {
+  height: 10em;
+  resize: none;
 }
-.acciones button:hover{
-	background: rgb(168, 167, 167);
+
+.formulario input[type=submit] {
+  background-color: #6da9ed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 1em;
+  padding: 0.4em 0.2em;
+  text-align: center;
+  width: auto;
 }
+
+.formulario .acciones {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.btn {
+  background: rgb(206, 204, 206);
+}
+
+.acciones button:hover {
+  background: rgb(168, 167, 167);
+}
+
 /*fin contacto*/
-
-
 @media screen and (max-width: 550px) {
-    .inicio{
-	    grid-template-columns: 1fr;
-		grid-template-rows: 0.5fr, 0.5fr, 1fr, 0.25fr, 1fr, 0.5fr;
-		grid-template-areas: 
-			"header"
-			"nav"
-			"img"
-			"column1"
-			"column2"
-			"pie";
-		}
-	.imgPrincipal img{
-		height: 50%;		
-		}
-
-	nav{
-		height: 50%;	
-	}
-	.imgPrincipal{
-		margin: 0;
-	}
-	.conAlcohol{
-		grid-template-columns: 1fr;
-		grid-template-rows: 0.5fr, 0.5fr, 2fr, 0.5fr;
-		grid-template-areas: 
-			"header"
-			"nav"
-			"galeria"
-			"pie";
-			
-	}
-	.galeria{
-		flex-direction: column;
-	}
-	body{
-		font-size: 14px;
-	}
-	.h3 h3{
-		font-size: 14px;
-	}
-	header img{
-		height: 100px;
-		
-	}
-	.offcanvas.offcanvas-end{
-		width: 50%;
-	}
-	.navbar-toggler{
-		font-size: 10px;
-	}
-
-	  
+  .inicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr, 0.5fr, 1fr, 0.25fr, 1fr, 0.5fr;
+    grid-template-areas: "header" "nav" "img" "column1" "column2" "pie";
+  }
+  .imgPrincipal img {
+    height: 50%;
+  }
+  nav {
+    height: 50%;
+  }
+  .imgPrincipal {
+    margin: 0;
+  }
+  .galeria {
+    flex-direction: column;
+  }
+  body {
+    font-size: 14px;
+  }
+  .h3 h3 {
+    font-size: 14px;
+  }
+  header img {
+    height: 100px;
+  }
+  .offcanvas.offcanvas-end {
+    width: 50%;
+  }
+  .navbar-toggler {
+    font-size: 10px;
+  }
 }
 
-
+/*# sourceMappingURL=style.css.map */

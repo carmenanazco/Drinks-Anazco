@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Quicksand', sans-serif;
+}
+header {
+	grid-area: header;
+
+    img{
+	height: 150px;
+	width: 100%;
+	margin: 0 auto;
+    }
+}
+nav{
+	grid-area: nav;
+}
+
+footer{
+	clear: both;
+	background: $bg-footer;
+	color: #333;
+	font-size: 0.7em;
+	font-style: italic;
+	text-align: center;
+	grid-area: pie;
+
+	p{
+		@extend %espacios;
+	}
+
+}
+
+h2{
+	@extend %espacios;
+	text-align: center;
+}
+
+.h3 h3{
+	font-size: 18px;
+}
+
+
+img {
+	border-style: none;
+  }
+button {
+	font-family: inherit; 
+	font-size: 100%; 
+  }
+
+.column1{
+	grid-area: column1;
+}
+
+.column2{
+	grid-area: column2;
+}
+
+.imgPrincipal{
+	grid-area: img;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2em;
+    img{
+    	transition: all 0.3s ease;
+        &:hover{
+        animation:fotograma 1s ease;
+        animation-iteration-count: 3;
+        }
+    }
+}
+
+@keyframes fotograma{
+	15% {transform: rotate(25deg);}
+	30% {transform: rotate(-25deg);}
+	50% {transform: rotate(25deg);}
+	65% {transform: rotate(-25deg);}
+	80% {transform: rotate(30deg);}
+	100% {transform: rotate(-20deg);}
+}
+	
+.inicio{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 0.5fr, 0.5fr, 1fr, 1fr, 0.5fr;
+	grid-template-areas: 
+	"header header header"
+	"nav nav nav"
+	"column1 img column2"
+	"column1 img column2"
+	"pie pie pie";
+}
+	  
+.column1, .column2{
+	@extend %displayFlex;
+	@extend %espacios;
+
+    p{
+	    animation-name: Animac;
+	    animation-duration: 6s;
+		
+    }
+}
+ 
+
+@keyframes Animac{
+	from{ color: white; }
+	to{ color: black; }
+}
