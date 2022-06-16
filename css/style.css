@@ -20,15 +20,43 @@ body {
 
 header {
   grid-area: header;
+  background-color: rgb(29, 29, 29);
 }
 header img {
-  height: 150px;
-  width: 100%;
-  margin: 0 auto;
+  height: 120px;
 }
 
 nav {
   grid-area: nav;
+  background: rgb(229, 112, 231);
+  background: -moz-linear-gradient(top, rgb(229, 112, 231) 20%, rgb(168, 73, 163) 60%);
+  background: -webkit-linear-gradient(top, rgb(229, 112, 231) 20%, rgb(168, 73, 163) 60%);
+  background: linear-gradient(to bottom, rgb(229, 112, 231) 20%, rgb(168, 73, 163) 60%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#e570e7", endColorstr="#a849a3",GradientType=0 );
+  height: 50px;
+}
+nav .navMobile {
+  display: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 0;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.2em;
+  padding: 0.2em 0.2em;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover {
+  background-color: rgba(4, 2, 2, 0.3);
 }
 
 footer {
@@ -190,11 +218,22 @@ button {
 /*Inicio sin alcohol*/
 .licuados {
   background-image: url(../img/fondo-licuado.jpeg);
-  padding: 0.5em;
+  grid-area: licuados;
 }
 
 .smoothies {
   background-image: url(../img/fondo-smoothie.jpeg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  grid-area: smoothies;
+}
+
+.smoothies, .licuados {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 0.5em;
 }
 
@@ -210,7 +249,6 @@ button {
   margin: 1em;
   padding: 1em;
   background-color: rgba(240, 255, 240, 0.5);
-  margin-left: auto;
 }
 
 .licuados h2, .smoothies h2 {
@@ -221,14 +259,25 @@ button {
   margin: 1.5em 0;
 }
 
+.sinAlcohol {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "licuados" "smoothies" "pie";
+}
+
 /*fin sin alcohol*/
 /*Inicio cafe*/
-.cafe-back {
+.seccionCafe {
   background-color: rgba(255, 248, 220, 0.5);
+  grid-area: seccionCafe;
+}
+
+.cafe-back {
   padding: 0.5em;
-  display: flex;
-  justify-content: center;
   text-align: center;
+  max-height: 700px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .cafe {
@@ -239,14 +288,16 @@ button {
   box-sizing: border-box;
   overflow: hidden;
   background-color: white;
-  max-height: 400px;
+  display: flex;
+  align-items: center;
 }
-
+.cafe p {
+  margin: 1.5em;
+}
 .cafe figure {
   margin: 1em;
   align-items: center;
 }
-
 .cafe figure img {
   width: 200px;
   height: 200px;
@@ -267,42 +318,31 @@ button {
   font-weight: 200;
 }
 
-.cafe .preparacion h4 {
-  font-size: 0.8em;
-  line-height: 1.2em;
-}
-
-.cafe p {
-  margin: 1.5em;
+.bebidasConCafe {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "seccionCafe" "pie";
 }
 
 /*Fin cafe*/
 /*inicio contacto*/
-.sectionContacto {
-  padding: 1em;
-  margin: 1em;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-}
-
-.sectionContacto p {
-  margin: 1em;
-}
-
 .imagenContacto {
-  width: 50%;
+  grid-area: imagenContacto;
 }
-
 .imagenContacto img {
   width: 350px;
   height: 300px;
   margin: 1em;
 }
+.imagenContacto p {
+  margin-left: 1em;
+}
 
 .formulario {
-  width: 50%;
   margin-top: 3em;
+  display: flex;
+  align-items: flex-end;
+  grid-area: formulario;
 }
 
 .formulario label {
@@ -349,6 +389,12 @@ button {
   background: rgb(168, 167, 167);
 }
 
+.seccionContacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "header header" "nav nav" "imagenContacto formulario" "pie pie";
+}
+
 /*fin contacto*/
 @media screen and (max-width: 550px) {
   .inicio {
@@ -361,6 +407,13 @@ button {
   }
   nav {
     height: 50%;
+    background: white;
+  }
+  nav .navDesktop {
+    display: none;
+  }
+  nav .navMobile {
+    display: contents;
   }
   .imgPrincipal {
     margin: 0;
@@ -375,13 +428,26 @@ button {
     font-size: 14px;
   }
   header img {
-    height: 100px;
+    height: 90px;
   }
   .offcanvas.offcanvas-end {
     width: 50%;
   }
   .navbar-toggler {
     font-size: 10px;
+  }
+  .cafe-back {
+    width: 400px;
+    font-size: 14px;
+  }
+  .cafe-back img {
+    width: 100px;
+    height: 100px;
+  }
+  .seccionContacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "nav" "imagenContacto" "formulario" "pie";
   }
 }
 
