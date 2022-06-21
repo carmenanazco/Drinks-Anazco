@@ -1,0 +1,71 @@
+.seccionContacto{
+    
+    grid-area: seccionContacto;
+    .columnContacto{
+        @extend %displayFlex;
+    }
+}
+
+.imagenContacto{
+    @extend %espacios;
+	img{
+        width: 450px;
+        height: 400px;
+        @extend %espacios;
+	}
+    h2{
+        text-align: center;
+    }
+	p{
+	    margin-left: 4vh;
+	}
+}
+
+.formulario{
+	margin-top: 3em;
+	@extend %displayFlex;
+    label{
+        vertical-align: top;
+    } 
+    textarea, input{
+        background-color: #ddd;
+        border-radius: 5px;
+        border: 1px solid #999;
+        font-size: 0.8em;
+        padding: 0.4em 0.6em;
+        width: 96%;
+    }
+    textarea{
+	    height: 10em;
+	    resize: none;
+    } 
+    input[type="submit"]{
+        background-color: #6da9ed;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        color: white;
+        font-size: 1em;
+        padding: 0.4em 0.2em;
+        text-align: center;
+        width: auto;
+    }
+    .acciones{
+	    text-align: center;
+	    padding-top: 2em;
+        button:hover{
+	        background: rgb(168, 167, 167);
+        }
+    }
+}
+
+.btn{
+	background: rgb(206, 204, 206);
+}
+
+.contacto{
+	display: grid;
+	grid-template-areas:  
+	"header"
+	"nav"
+	"seccionContacto"
+	"pie";
+}

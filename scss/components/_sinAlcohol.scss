@@ -1,0 +1,73 @@
+.sinAlcohol{
+    h2{
+        padding-top: 1.5vh;
+    }
+
+    h3{
+        @extend %espacios;
+        color: rgb(49, 38, 49);
+        font-size: 4vh;
+        border-bottom: 1px solid black;
+    }
+    h4{
+        @extend %espacios;
+        color: rgb(117, 55, 114);
+        font-size: 3vh;
+        line-height: 1.2vh;
+    } 
+}
+
+.licuados{
+	background-image: url(../img/fondo-licuado.jpeg);
+	@extend %posicionBg;
+	padding: 0.5em;
+    grid-area: licuados;
+    .recetaLicuado{
+        @extend %espacios;
+        background-color: $fondoTransparente;
+        border-radius: 0.5em;
+        p{
+            margin: 4vh;
+            padding-left: 2vh;
+            text-align: justify;
+            font-size: 2.5vh;
+        }
+    }
+}
+
+.smoothies{
+	background-image: url(../img/fondo-smoothie.jpeg);
+    @extend %posicionBg;
+	padding: 0.5em;
+	grid-area: smoothies;    
+    .recetaSmoothie{
+        @extend %espacios;
+        background-color: $fondoTransparente;
+        border-radius: 0.5em;
+        p{
+            margin: 4vh;
+            padding-left: 2vh;
+            text-align: justify;
+            font-size: 2.5vh;
+        }
+    }
+}
+.arriba {
+	font-family: inherit; 
+	font-size: 100%; 
+    @extend %displayFlex;
+  }
+
+    
+
+
+.sinAlcohol{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"licuados"
+	"smoothies"
+	"pie";
+}

@@ -5,6 +5,13 @@
 }
 
 %espacios{
-    margin: 1em;
-    padding: 1em;
+    margin: 2vh;
+    padding: 2vh;
+}
+
+%posicionBg{
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }

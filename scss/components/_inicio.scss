@@ -6,8 +6,10 @@ body {
 	font-family: 'Quicksand', sans-serif;
 }
 header {
-	grid-area: header;
 	background-color: rgb(29, 29, 29);
+	display: flex;
+	justify-content: center;
+	grid-area: header;
     img{
 	height: 120px;
     }
@@ -19,9 +21,11 @@ nav{
     background: -webkit-linear-gradient(top, rgba(229,112,231,1) 20%,rgba(168,73,163,1) 60%);
     background: linear-gradient(to bottom, rgba(229,112,231,1) 20%,rgba(168,73,163,1) 60%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 );	
-    height: 50px;
+    height: $alturaNav;
 	.navMobile{
 		display: none;
+		height: $alturaNav;
+		@extend %espacios;
 	}
 
 	ul{
@@ -40,7 +44,7 @@ nav{
 		padding: 0.2em 0.2em;
 		transition: all 0.3s ease;
 		&:hover{
-			background-color:rgba(4,2,2,0.3);
+			background-color:rgba(2,2,2,0.1);
 			}
 		}
 	}
@@ -55,8 +59,8 @@ footer{
 	font-size: 0.7em;
 	font-style: italic;
 	text-align: center;
+	height: $alturaFooter;
 	grid-area: pie;
-
 	p{
 		@extend %espacios;
 	}
@@ -76,10 +80,6 @@ h2{
 img {
 	border-style: none;
   }
-button {
-	font-family: inherit; 
-	font-size: 100%; 
-  }
 
 .column1{
 	grid-area: column1;
@@ -95,13 +95,17 @@ button {
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 2em;
-    img{
-    	transition: all 0.3s ease;
-        &:hover{
-        animation:fotograma 1s ease;
-        animation-iteration-count: 3;
-        }
-    }
+	
+	div{
+			height: calc(100vh - $alturaNav - $alturaFooter);
+    	img{
+			transition: all 0.3s ease;
+			&:hover{
+			animation:fotograma 1s ease;
+			animation-iteration-count: 3;
+			}
+		}
+	}	
 }
 
 @keyframes fotograma{
@@ -116,7 +120,6 @@ button {
 .inicio{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 0.5fr, 0.5fr, 1fr, 1fr, 0.5fr;
 	grid-template-areas: 
 	"header header header"
 	"nav nav nav"
@@ -132,7 +135,6 @@ button {
     p{
 	    animation-name: Animac;
 	    animation-duration: 6s;
-		
     }
 }
  

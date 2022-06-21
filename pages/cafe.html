@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Recetas de tragos con café">
 		<link rel="shortcut icon" href="../img/favicon.ico">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
 		<link rel="stylesheet" href="../css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-		<title>Drinks</title>
+		<title>Tragos con café</title>
 	</head>
 	<body>
 		<div class="bebidasConCafe">
@@ -57,9 +58,16 @@
 			<section class="seccionCafe">
 				<h2>Bebidas con Café</h2>
 				<div class="cafe-back">		
-					<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"> 
-						<div class="carousel-inner">  
-							<div class="carousel-item active"> 
+					<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+						  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+						  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+						  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active" data-bs-interval="10000">
 								<div class="d-block w-100 cafe">
 									<div class="preparacion">
 										<h3>Café Amaretto</h3>
@@ -72,9 +80,8 @@
 										<img src="../img/cafe-amaretto.jpg" alt="taza de cafe">					
 									</figure>
 								</div>
-							</div>  
-							
-							<div class="carousel-item">  
+						  	</div>
+						  	<div class="carousel-item" data-bs-interval="2000">
 								<div class="d-block w-100 cafe">			
 									<div class="preparacion">
 										<h3>Karsk</h3>
@@ -87,9 +94,8 @@
 										<img src="../img/karks.jpg" alt="taza de cafe">				
 									</figure>
 								</div> 
-							</div>  
-							
-							<div class="carousel-item"> 
+						 	</div>
+						  	<div class="carousel-item" data-bs-interval="2000">
 								<div class="d-block w-100 cafe">	
 									<div class="preparacion">
 										<h3>Café Marnier</h3>
@@ -103,8 +109,7 @@
 									</figure>	
 								</div>
 							</div>
-							
-							<div class="carousel-item"> 
+							<div class="carousel-item" data-bs-interval="2000"> 
 								<div class="d-block w-100 cafe">		
 									<div class="preparacion">
 										<h3>Café al Anis</h3>
@@ -117,9 +122,8 @@
 										<img src="../img/cafe-anis.jpg" alt="taza de cafe">						
 									</figure>	
 								</div>
-							</div>
-							
-							<div class="carousel-item"> 
+							</div>							
+							<div class="carousel-item" data-bs-interval="2000"> 
 								<div class="d-block w-100 cafe">			
 									<div class="preparacion">
 										<h3>Capetown Coffee</h3>
@@ -133,16 +137,15 @@
 									</figure>
 								</div>
 							</div>
-							
-						</div>  
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">  
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>  
-							<span class="visually-hidden">Previous</span>  
-						</button>  
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">  
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>  
-							<span class="visually-hidden">Next</span>  
-						</button> 
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
 					</div>
 				</div> 	
 			</section>

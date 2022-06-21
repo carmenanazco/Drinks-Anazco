@@ -1,0 +1,59 @@
+.seccionCafe{
+	background-color: rgba(255,248,220,0.5);
+	@extend %displayFlex;
+	flex-direction: column; 
+	grid-area: seccionCafe;
+
+}
+.cafe-back{
+	padding: 0.5em;
+	text-align: center;
+	max-height: 700px;
+	max-width: 700px;
+}
+
+.cafe{
+	border: 1px solid #ddd;
+	border-radius: 0.5em;
+	@extend %espacios;
+	box-sizing: border-box;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	height: 550px;
+	p{
+	margin: 1.5em;
+	}
+	figure{
+		margin: 1em;
+		align-items: center;
+		img{
+		width: 200px;
+		height: 200px;
+		}
+	}
+
+    h3{
+        color: saddlebrown;
+        font-size: 1.2em;
+        font-weight: 500;
+        margin: 0 0 1em;
+        border-bottom: 1px solid black;
+        padding-bottom: 0.5em;
+    }
+    h4{
+        color: chocolate;
+        font-size: 1em;
+        font-weight: 200;
+    }
+}
+
+.bebidasConCafe{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"seccionCafe"
+	"pie";
+}
