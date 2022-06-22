@@ -52,15 +52,6 @@
         }
     }
 }
-.arriba {
-	font-family: inherit; 
-	font-size: 100%; 
-    @extend %displayFlex;
-  }
-
-    
-
-
 .sinAlcohol{
 	display: grid;
 	grid-template-columns: 1fr;

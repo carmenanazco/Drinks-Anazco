@@ -47,15 +47,20 @@
 		flex-direction: column;
 	}
 	.tragos{
-		max-height: 300px;
-		
+		max-width: 200px;
+		max-height: 350px;
 		img{
-			width: 100%;
-			max-height: 100px;
+			max-height: 150px;
 		}
 		h3{
-		font-size: 14px;
+		font-size: 12px;
 		}
+		p{
+			font-size: 10px;
+		}
+	}
+	.arriba button{
+		font-size: 10px;
 	}
 	.sinAlcohol{
 		h3{
