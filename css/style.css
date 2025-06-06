@@ -38,9 +38,9 @@ header img {
 nav {
   grid-area: nav;
   background: rgb(229, 112, 231);
-  background: -moz-linear-gradient(top, rgb(229, 112, 231) 20%, rgb(168, 73, 163) 60%);
-  background: -webkit-linear-gradient(top, rgb(229, 112, 231) 20%, rgb(168, 73, 163) 60%);
-  background: linear-gradient(to bottom, rgb(229, 112, 231) 20%, rgb(168, 73, 163) 60%);
+  background: -moz-linear-gradient(top, rgb(0, 0, 0) 20%, rgb(168, 73, 163) 60%);
+  background: -webkit-linear-gradient(top, rgb(8, 8, 8) 20%, rgb(168, 73, 163) 60%);
+  background: linear-gradient(to bottom, rgb(8, 8, 8) 20%, rgb(168, 73, 163) 60%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#e570e7", endColorstr="#a849a3",GradientType=0 );
   height: 50PX;
 }
